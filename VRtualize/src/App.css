@@ -1,0 +1,291 @@
+/* Colores de la imagen */
+:root {
+    --dark-purple: #3b0a6d;
+    --medium-purple: #5e0fa5;
+    --bright-purple: #9310f7;
+    --pink: #e50ff5;
+    --blue-cyan: #34c8f7;
+    --dark-blue: #1a0b61;
+    --white: #fff;
+}
+
+/* Reset y base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, var(--dark-purple), var(--medium-purple), var(--bright-purple));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+header {
+    width: 100%;
+    background: var(--dark-blue);
+    padding: 1rem 2rem;
+    border-bottom: 3px solid var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header img.logo {
+    height: 50px;
+    width: auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--pink);
+    text-shadow: 1.5px 1.5px var(--blue-cyan);
+}
+
+/* Sección Hero */
+.hero {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: 15px;
+    background: rgba(26, 11, 97, 0.85);
+    margin-top: 2rem;
+    box-shadow: 0 0 20px var(--pink);
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    background: linear-gradient(90deg, var(--pink), var(--blue-cyan));
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 720px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+/* Sección de Características */
+.features {
+    width: 90%;
+    max-width: 1000px;
+    margin: 3rem auto 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--pink);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px var(--pink);
+}
+
+.feature-card:hover,
+.feature-card:focus {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px var(--blue-cyan);
+    border-color: var(--blue-cyan);
+    outline: none;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--pink);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #ddd;
+}
+
+/* Sección de Precios */
+.pricing-section {
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(26, 11, 97, 0.9);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 25px var(--pink);
+}
+
+.pricing-section h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    color: var(--blue-cyan);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing-list {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #eee;
+}
+
+.pricing-list li {
+    background: rgba(147, 16, 247, 0.3);
+    margin: 12px 0;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 0 15px var(--pink);
+}
+
+/* Caja especial para Juegos de Mesa Digitales */
+.digital-board-games-box {
+    background: rgba(147, 16, 247, 0.5);
+    border: 3px solid var(--pink);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 12px 0;
+    box-shadow: 0 0 20px var(--pink);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #eee;
+}
+
+.digital-board-games-box strong {
+    color: var(--blue-cyan);
+}
+
+/* Sección de Reserva */
+.booking-section {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(26, 11, 97, 0.95);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 0 26px var(--blue-cyan);
+}
+
+.booking-section h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    color: var(--pink);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--blue-cyan);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--pink);
+    font-size: 1rem;
+    background-color: rgba(255 255 255 / 0.15);
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--blue-cyan);
+    background-color: rgba(255 255 255 / 0.25);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button[type="submit"] {
+    background: var(--pink);
+    border: none;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background: var(--blue-cyan);
+    outline: none;
+}
+
+/* Pie de página */
+footer {
+    width: 100%;
+    background: var(--dark-blue);
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--pink);
+    font-size: 1rem;
+    border-top: 3px solid var(--pink);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .pricing-section h2,
+    .booking-section h2 {
+        font-size: 2rem;
+    }
+}
